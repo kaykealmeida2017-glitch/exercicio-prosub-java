@@ -6,22 +6,22 @@ public class GestaoSubmarino {
         Scanner scanner = new Scanner(System.in);
 
             System.out.println("--- SISTEMA DE COMANDO PROSUB 2026 ---");
-            System.out.println("1. Análise de Risco de Paralisação");
+            System.out.println("1. Analise de Risco de Paralisacao");
             System.out.println("2. Controle de Acesso ao Almirantado");
             System.out.println("3. Monitoramento de Temperatura do Reator Nuclear");
-            System.out.print("Escolha uma opção: ");
+            System.out.print("Escolha uma opcao: ");
             int opcao = scanner.nextInt();
 
         switch(opcao) {
             case 1:
             
-            System.out.print("Digite o valor anual em bilhões(R$): ");
+            System.out.print("Digite o valor anual em bilhoes(R$): ");
             double valorAnualEmBilhoes = scanner.nextDouble();
 
             if (valorAnualEmBilhoes < 0.5) {
-                System.out.println("ALERTA: Risco de paralisação total");
+                System.out.println("ALERTA: Risco de paralisacao total");
             } else if (valorAnualEmBilhoes >= 0.5 && valorAnualEmBilhoes < 1.0) {
-                System.out.println("RITMO LENTO: Finalização prevista para 2037");
+                System.out.println("RITMO LENTO: Finalizacao prevista para 2037");
             } else if (valorAnualEmBilhoes >= 1.0) {
                 System.out.println("Projeto acelerado: Possibilidade de antecipacao de entrega");
             } break;
@@ -29,7 +29,7 @@ public class GestaoSubmarino {
             case 2:
             Scanner scanner2 = new Scanner(System.in);
 
-            System.out.print("Digite o nível de acesso(Total/Parcial): ");
+            System.out.print("Digite o nivel de acesso(Total/Parcial): ");
             String nivelAcesso = scanner2.nextLine();
 
             System.out.print("Digite o seu país de origem: ");
@@ -48,7 +48,7 @@ public class GestaoSubmarino {
             double temperaturaReator = scanner3.nextDouble();
 
             if (temperaturaReator >= 350) {
-                System.out.println("EMERGÊNCIA: Acionar sistema de resfriamento e emergência");
+                System.out.println("EMERGENCIA: Acionar sistema de resfriamento e emergencia");
             } else if (temperaturaReator > 280 && temperaturaReator < 350) {
                 System.out.println("Operação Normal - Cruzeiro");
             } else {
@@ -57,10 +57,12 @@ public class GestaoSubmarino {
             break;
 
             default:
-            System.out.println("Opção invalida. Por favor, selecione uma opção valida.");
+            System.out.println("Opcao invalida. Por favor, selecione uma opção valida.");
 
+        }
+        
+        scanner.close()
     }
-}
 }
 
 
